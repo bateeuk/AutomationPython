@@ -11,8 +11,6 @@ def step_impl(context):
     context.driver.maximize_window()
     context.driver.delete_all_cookies()
     context.driver.get("https://cartaxcheck.co.uk/")
-    context.driver.refresh()
-    context.driver.find_element_by_xpath('//h1[contains(text(),"Free Car Check")]')
     time.sleep(4)
 
 @when(u'User clicks vehicle enquiry text field and enters "<REG Number>"')
@@ -45,7 +43,7 @@ def step_impl(context):
     context.driver.find_element_by_xpath(
         '//div[contains(@class,"jsx-79705764")]//div[1]//div[1]//span[1]//div[2]//dl[5]//dd[1]')
     print("Plate number" + str(elementR))
-    time.sleep(30)
+    time.sleep(15)
 
 @then(u'User navigates back to the Free Car Check page')
 def step_impl(context):
